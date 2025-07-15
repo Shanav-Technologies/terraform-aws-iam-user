@@ -62,6 +62,7 @@ Replace **MIT** and **shanav-tech** with the appropriate license and your inform
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.8.5 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.50.0 |
+| <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 4.0.4 |
 
 ## Providers
 
