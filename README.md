@@ -19,7 +19,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 # Example
 ```hcl
 module "iam-user" {
-  source      = "git::https://github.com/shanav-tech/terraform-aws-iam-user.git?ref=v1.0.0"
+  source      = "git::https://github.com/Shanav-Technologies/terraform-aws-iam-user.git?ref=v1.0.0"
 
   name        = "iam-user"
   environment = "test"
@@ -45,14 +45,14 @@ data "aws_iam_policy_document" "default" {
 
 
 ## Examples
-For detailed examples on how to use this module, please refer to the [examples](https://github.com/shanav-tech/terraform-aws-iam-user/tree/master/_example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [examples](https://github.com/Shanav-Technologies/terraform-aws-iam-user/tree/master/_example) directory within this repository.
 
 ## License
-This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/shanav-tech/terraform-aws-iam-user/blob/master/LICENSE) file for more details.
+This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/Shanav-Technologies/terraform-aws-iam-user/blob/master/LICENSE) file for more details.
 
 ## Author
 Your Name
-Replace **MIT** and **shanav-tech** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
+Replace **MIT** and **Shanav-Technologies** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 
 <!-- BEGIN_TF_DOCS -->
@@ -61,32 +61,32 @@ Replace **MIT** and **shanav-tech** with the appropriate license and your inform
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.8.5 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.50.0 |
-| <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 4.0.4 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 6.5.0 |
+| <a name="requirement_tls"></a> [tls](#requirement\_tls) | 4.1.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.50.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.5.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/shanav-tech/terraform-aws-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/Shanav-Technologies/terraform-aws-labels.git | v1.0.0 |
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [aws_iam_access_key.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_access_key) | resource |
-| [aws_iam_user.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user) | resource |
-| [aws_iam_user_group_membership.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_group_membership) | resource |
-| [aws_iam_user_login_profile.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_login_profile) | resource |
-| [aws_iam_user_policy.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_policy) | resource |
-| [aws_iam_user_policy_attachment.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_policy_attachment) | resource |
-| [aws_iam_user_ssh_key.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_ssh_key) | resource |
+| [aws_iam_access_key.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/iam_access_key) | resource |
+| [aws_iam_user.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/iam_user) | resource |
+| [aws_iam_user_group_membership.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/iam_user_group_membership) | resource |
+| [aws_iam_user_login_profile.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/iam_user_login_profile) | resource |
+| [aws_iam_user_policy.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/iam_user_policy) | resource |
+| [aws_iam_user_policy_attachment.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/iam_user_policy_attachment) | resource |
+| [aws_iam_user_ssh_key.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/iam_user_ssh_key) | resource |
 
 ## Inputs
 
@@ -100,7 +100,7 @@ Replace **MIT** and **shanav-tech** with the appropriate license and your inform
 | <a name="input_force_destroy"></a> [force\_destroy](#input\_force\_destroy) | When destroying this user, destroy even if it has non-Terraform-managed IAM access keys, login profile or MFA devices. Without force\_destroy a user with non-Terraform-managed access keys and login profile will fail to be destroyed. | `bool` | `false` | no |
 | <a name="input_groups"></a> [groups](#input\_groups) | (Optional) List of IAM groups to add the User to. | `list(string)` | `[]` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`application`. | `list(any)` | `[]` | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'shanav-tech' | `string` | `"shanav-tech"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'Shanav-Technologies' | `string` | `"Shanav-Technologies"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
 | <a name="input_password_length"></a> [password\_length](#input\_password\_length) | The length of the generated password | `number` | `20` | no |
 | <a name="input_password_reset_required"></a> [password\_reset\_required](#input\_password\_reset\_required) | Whether the user should be forced to reset the generated password on first login. | `bool` | `true` | no |

@@ -1,6 +1,6 @@
-# Managed By : shanav-tech
+# Managed By : Shanav-Technologies
 # Description : Terraform module to create IAM user resource on AWS.
-# Copyright @ shanav-tech. All Right Reserved.
+# Copyright @ Shanav-Technologies. All Right Reserved.
 
 #Module      : label
 #Description : This terraform module is designed to generate consistent label names and tags
@@ -9,7 +9,7 @@
 
 
 module "labels" {
-  source      = "git::https://github.com/shanav-tech/terraform-aws-labels.git?ref=v1.0.0"
+  source      = "git::https://github.com/Shanav-Technologies/terraform-aws-labels.git?ref=v1.0.0"
   name        = var.name
   environment = var.environment
   repository  = var.repository
